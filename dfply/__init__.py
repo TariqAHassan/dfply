@@ -1,6 +1,7 @@
 from .base import *
 from .group import *
 from .join import *
+from .properties import *
 from .reshape import *
 from .select import *
 from .select import *
