@@ -24,7 +24,7 @@ def columns(df):
     Returns:
 
     """
-    return df.columns
+    return tuple(df.columns)
 
 
 @dfpipe
