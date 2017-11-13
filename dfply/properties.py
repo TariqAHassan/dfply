@@ -47,12 +47,12 @@ def glimpse(df):
         head = ", ".join(map(elem_to_str, arr))
         return "{}...".format(head[:76])
 
-    glip = df.dtypes.reset_index()
-    glip["summary"] = pd.Series(
+    glimpse_df = df.dtypes.reset_index()
+    glimpse_df["summary"] = pd.Series(
         map(arr_to_str, df.head(100).T.values)).values
-    glip.index = glip["index"].values
-    glip = glip.drop("index", 1).rename(
+    glimpse_df.index = glimpse_df["index"].values
+    glimpse_df = glimpse_df.drop("index", 1).rename(
         columns={0: "dtype", "summary": ""})
 
-    print(glip)
+    print(glimpse_df)
     print("\n[{} x {}]".format(*df.shape))
