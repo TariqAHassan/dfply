@@ -45,7 +45,7 @@ def glimpse(df):
 
     def arr_to_str(arr):
         head = ", ".join(map(elem_to_str, arr))
-        return "{}...".format(head[:79])
+        return "{}...".format(head[:76])
 
     glip = df.dtypes.reset_index()
     glip["summary"] = pd.Series(
